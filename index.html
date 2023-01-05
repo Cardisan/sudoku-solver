@@ -5,15 +5,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>A Basic HTML5 Template</title>
+  <title>Sudoku solver</title>
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-
+  <script src="js/p5.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/action.js"></script>
+  <script src="js/detection.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="js/presentation.js"></script>
+  <script src="js/dom.js"></script>
 </head>
 
-<body>
-  <h1>Welcome to personal project</h1>
-  <script src="js/script.js"></script>
-  <script src="js/p5.js"></script>
+<body onload="assignDOM()">
+  <header>
+    <div class="header">
+      <h1>Sudoku solver</h1>
+    </div>
+  </header>
+  <div class="textBox main">
+    Sudoku is a logic-based, combinatorial number-placement puzzle. In classic Sudoku, the objective is to fill a 9 × 9 grid with digits so that each column, each row, and each of the nine 3 × 3 subgrids that compose the grid (also called "boxes", "blocks", or "regions") contain all of the digits from 1 to 9. The puzzle setter provides a partially completed grid, which for a well-posed puzzle has a single solution. Source: <a href=https://en.wikipedia.org/wiki/Sudoku>Wikipedia</a><br><br>
+    <a href="index.html#rules">How to play?</a>
+  </div>
+  <div id="panel">    
+    <div id="canvasMain"></div>
+    <div id="interface">
+      <div class="toggle">Safe<br>
+        <label class="Switch">
+          <input type="checkbox" id="safetyButton" class="Switch__Input">
+          <span class="Slider"></span>
+        </label>
+      </div>
+      <div class="toggle">Comment<br>
+        <label class="Switch">
+          <input type="checkbox" id="commentButton" class="Switch__Input">
+          <span class="Slider"></span>
+        </label>
+      </div><br><br>
+      <button id="hintButton" class="interfaceButton">Hint</button><br>
+      <button id="solveButton" class="interfaceButton">Solve one</button><br>
+      <button id="solveAllButton" class="interfaceButton">Solve all</button><br>
+      <button id="restartButton" class="interfaceButton">Restart</button><br>
+      <button id="saveButton" class="interfaceButton">Save sudoku</button><br>
+      <button id="restoreButton" class="interfaceButton">Restore sudoku</button><br>
+      <button id="loadButton" class="interfaceButton">Load sudoku</button><br>
+      <button id="generateButton" class="interfaceButton">Generate sudoku</button><br>
+    </div>
+  </div>
+  <div class="textBox main" id="rules">
+    Select with MOUSE_CLICK, change selected field with ARROWS. <br>
+    Enter a number in selected field by pressing NUMBER_KEY (comment mode has to be switched off).<br>
+    Commenting: while COMMENT_MODE is switched on, select a field you want to add comments to and press a number key (press it again if you want to remove comment).<br>
+    Safe mode: prevents the user from entering a number which already appears in current row, column or block.<br>
+    Cancel last move with BACKSPACE, erase any selected number with DELETE. 
+  </div>
 </body>
 </html>

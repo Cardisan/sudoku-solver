@@ -1,0 +1,98 @@
+body {
+	background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/white_wall_hash.png');
+}
+.header {
+	text-align: center;
+}
+.main {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+#canvasMain {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.interfaceButton {
+	transition-duration: 2s;
+	box-shadow: 3px 4px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	margin:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.interfaceButton:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.interfaceButton:active {
+	position:relative;
+	top:1px;
+}
+.textBox {
+ 	margin-top: 20px;
+ 	margin-bottom: 20px;
+}
+#panel {
+	display: flex;
+	justify-content: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+.toggle {
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+.Switch {
+	display: inline-block;
+  	position: relative;
+  	width: 60px;
+  	height: 34px;
+}
+
+.Switch__Input { 
+  	opacity: 0;
+  	width: 0;
+  	height: 0;
+}
+
+.Slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 1rem;
+	background-color: lightgray;
+	transition: .3s;
+}
+
+.Slider::before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	border-radius: 50%;
+	background-color: white;
+	transition: .3s;
+}
+
+.Switch__Input:checked + .Slider::before {
+ 	transform: translateX(26px);
+}
+
+.Switch__Input:checked + .Slider {
+ 	background-color: cornflowerblue;
+}
