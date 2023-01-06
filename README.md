@@ -16,3 +16,5 @@ Cancel last move – Backspace<br>
 Toggle Comment – C<br>
 Enter comment into selected field – Any number (1-9) while <i>Comment</i> is on<br>
 Delete comment from selected field – Number to be removed (1-9) while <i>Comment</i> is on<br>
+<h2>Try me out</h2>
+<a href=https://cardisan.github.io/sudoku-solver/>Link to GitHub Pages</a>
